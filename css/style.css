@@ -66,7 +66,7 @@ section {
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .section-header h2 {
@@ -89,7 +89,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    padding: 5px 10px;
+    padding: 8px 16px;
 
     border-radius: 10px;
 
@@ -274,13 +274,11 @@ section {
 
     inset: 0;
 
-    background: linear-gradient(
-        90deg,
-        rgba(15, 23, 42, 0.92) 0%,
-        rgba(15, 23, 42, 0.70) 40%,
-        rgba(15, 23, 42, 0.30) 75%,
-        rgba(15, 23, 42, 0.20) 100%
-    );
+    background: linear-gradient(90deg,
+            rgba(15, 23, 42, 0.92) 0%,
+            rgba(15, 23, 42, 0.70) 40%,
+            rgba(15, 23, 42, 0.30) 75%,
+            rgba(15, 23, 42, 0.20) 100%);
 
     z-index: 2;
 }
@@ -352,7 +350,7 @@ section {
 
 .hero-buttons {
     display: flex;
-
+    align-items: center;
     gap: 15px;
 }
 
@@ -361,13 +359,13 @@ section {
 ========================= */
 
 .advantages {
-    padding: 50px 0 ;
+    padding: 50px 0;
     background: white;
 }
 
 .advantages-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -446,7 +444,7 @@ section {
 
 .locations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
     gap: 20px;
 
@@ -476,7 +474,7 @@ section {
 
 .cubage-form {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 
@@ -546,7 +544,7 @@ section {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -589,7 +587,7 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
 }
 
@@ -610,7 +608,7 @@ section {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255, 255, 255, .1);
 
     margin-top: 50px;
 
@@ -720,9 +718,7 @@ section {
 ========================= */
 
 .cargo-card {
-    flex: 0 0 calc(
-        (100% - 50px) / 3
-    );
+    flex: 0 0 calc((100% - 50px) / 3);
 
     background: #ffffff;
 
@@ -861,8 +857,7 @@ section {
     color: #ffffff;
 
     transform:
-        translateY(-50%)
-        scale(1.05);
+        translateY(-50%) scale(1.05);
 }
 
 .cargo-carousel-prev {
@@ -948,9 +943,7 @@ section {
 @media (max-width: 992px) {
 
     .cargo-card {
-        flex: 0 0 calc(
-            (100% - 25px) / 2
-        );
+        flex: 0 0 calc((100% - 25px) / 2);
     }
 
     .cargo-carousel-prev {
@@ -962,9 +955,86 @@ section {
     }
 }
 
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero-content,
+    .service-areas-content {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid,
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-actions a,
+    .nav-list {
+        font-size: .8rem;
+    }
+
+    .cubage-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content {
+        min-height: 100%;
+    }
+
+    .contact-grid,
+    .cubage-form {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .advantage-card {
+        padding: 10px;
+        font-size: .8rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons .btn {
+        width: 60%;
+    }
+}
 
 /* =========================
-   MOBILE
+   MOBILE CARGO-CAROUSEL
 ========================= */
 
 @media (max-width: 768px) {
@@ -1001,59 +1071,5 @@ section {
 
     .cargo-card-image {
         height: 240px;
-    }
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 992px) {
-
-    .hero-content,
-    .service-areas-content {
-        grid-template-columns: 1fr;
-    }
-
-    .advantages-grid,
-    .contact-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .cubage-form {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-
-    section {
-        padding: 70px 0;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .advantages-grid,
-    .contact-grid,
-    .cubage-form {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
     }
 }
