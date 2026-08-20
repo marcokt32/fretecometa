@@ -62,6 +62,7 @@ section {
 .container {
     width: min(1200px, 90%);
     margin: auto;
+    padding: 10px 0;
 }
 
 .section-header {
@@ -196,6 +197,11 @@ section {
 ========================= */
 
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
     position: relative;
 
     width: 100%;
@@ -407,10 +413,11 @@ section {
 .service-areas-content {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 60px;
+    gap: 25px;
 }
 
 .service-areas-info h2 {
+    text-align: center;
     font-size: 2.5rem;
     color: var(--dark);
     margin-bottom: 20px;
@@ -545,15 +552,20 @@ section {
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 15px;
 }
 
 .contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+
     background: white;
 
     text-align: center;
 
-    padding: 35px;
+    padding: 10px;
 
     border-radius: var(--radius);
 
@@ -564,15 +576,9 @@ section {
     width: 90px;
     height: 90px;
 
-    margin: auto auto 20px;
-
     border-radius: 50%;
 
     overflow: hidden;
-}
-
-.contact-card h3 {
-    margin-bottom: 10px;
 }
 
 /* =========================
@@ -935,6 +941,93 @@ section {
     font-weight: 500;
 }
 
+/* =========================
+   PÁGINA EM CONSTRUÇÃO
+========================= */
+
+.construction-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(135deg,
+            #0f172a,
+            #1e3a8a);
+
+    text-align: center;
+}
+
+.construction-container {
+    max-width: 700px;
+}
+
+.construction-icon {
+    font-size: 5rem;
+
+    margin-bottom: 20px;
+}
+
+.construction-subtitle {
+    display: inline-block;
+
+    color: #93c5fd;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.construction-title {
+    color: #ffffff;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.construction-description {
+    color: #cbd5e1;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.construction-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+    .construction-actions {
+        flex-direction: column;
+    }
+
+    .construction-actions .btn {
+        width: 100%;
+    }
+}
+
 
 /* =========================
    TABLET
@@ -989,7 +1082,7 @@ section {
 @media (max-width: 768px) {
 
     section {
-        padding: 70px 0;
+        padding: 30px 0;
     }
 
     .nav-menu {
@@ -1003,6 +1096,10 @@ section {
     .contact-grid,
     .cubage-form {
         grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        width: 90vw;
     }
 
     .advantages-grid {
@@ -1072,4 +1169,254 @@ section {
     .cargo-card-image {
         height: 240px;
     }
+}
+
+
+/* =========================
+   LOCAÇÃO DE MESAS E CADEIRAS
+========================= */
+
+.rental-section {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+
+/* CONTEÚDO */
+
+.rental-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.rental-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.rental-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.rental-image:hover img {
+    height: 100%;
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.rental-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    color: #0f172a;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.rental-text p {
+
+    color: #64748b;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   LISTA DE BENEFÍCIOS
+========================= */
+
+.rental-features {
+    list-style: none;
+
+    margin: 30px 0;
+
+    padding: 0;
+}
+
+.rental-features li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #334155;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.rental-text .btn {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 992px) {
+
+    .rental-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .rental-image {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .rental-text {
+        text-align: center;
+    }
+
+    .rental-features li {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .rental-section {
+        padding: 70px 0;
+    }
+
+    .rental-image {
+        display: none;
+        border-radius: 16px;
+    }
+
+    .rental-text h2 {
+        margin-bottom: 15px;
+    }
+
+    .rental-features {
+        margin: 25px 0;
+    }
+}
+
+/* =========================
+   PÁGINA DE OBRIGADO
+========================= */
+
+.thanks-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(135deg,
+            #0f172a,
+            #1e3a8a);
+}
+
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+}
+
+.thanks-container .logo {
+    width: 300px;
+}
+
+.thanks-icon {
+    font-size: 5rem;
+
+    margin-bottom: 20px;
+}
+
+.thanks-subtitle {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #93c5fd;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.thanks-title {
+    color: white;
+
+    font-size: clamp(2.5rem,
+            5vw,
+            4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.thanks-description {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+    font-size: 1.1rem;
+}
+
+.thanks-actions {
+    display: flex;
+
+    justify-content: center;
 }
