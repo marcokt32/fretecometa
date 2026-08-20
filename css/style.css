@@ -1177,8 +1177,6 @@ section {
 ========================= */
 
 .rental-section {
-    padding: 100px 0;
-
     background: #ffffff;
 }
 
@@ -1201,6 +1199,8 @@ section {
 ========================= */
 
 .rental-image {
+    height: 80%;
+
     position: relative;
 
     overflow: hidden;
