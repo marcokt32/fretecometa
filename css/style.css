@@ -240,7 +240,9 @@ section {
 }
 
 
-/* IMAGENS DO CARROSSEL */
+/* =============================
+    IMAGENS DO CARROSSEL DO HERO
+================================*/
 
 .hero-slide-image {
     position: absolute;
@@ -265,7 +267,9 @@ section {
 }
 
 
-/* IMAGEM ATIVA */
+/* =================
+    IMAGEM ATIVA 
+===================*/
 
 .hero-slide-image.active {
     opacity: 1;
@@ -290,7 +294,9 @@ section {
 }
 
 
-/* CONTEÚDO */
+/* ==================
+    CONTEÚDO DO HERO 
+====================*/
 
 .hero-content {
     position: relative;
@@ -305,7 +311,9 @@ section {
 }
 
 
-/* TEXTO */
+/* ===========
+    TEXTO 
+=============*/
 
 .hero-text {
     max-width: 650px;
@@ -352,7 +360,9 @@ section {
 }
 
 
-/* BOTÕES */
+/* ===========
+    BOTÕES
+=========== */
 
 .hero-buttons {
     display: flex;
@@ -471,7 +481,7 @@ section {
 }
 
 /* =========================
-   CALCULADORA
+   CALCULADORA - INUTILIZADA
 ========================= */
 
 .cubage {
@@ -624,7 +634,7 @@ section {
 }
 
 /* =========================
-   CARGO CAROUSEL
+   CARROSSEL CARGA
 ========================= */
 
 .cargo-carousel-section {
@@ -634,7 +644,7 @@ section {
 
 
 /* =========================
-   CABEÇALHO
+   CABEÇALHO DA AREA DE CARGA
 ========================= */
 
 .cargo-section-header {
@@ -679,7 +689,7 @@ section {
 
 
 /* =========================
-   CARROSSEL
+   CARROSSEL DA CARGA
 ========================= */
 
 .cargo-carousel {
@@ -695,7 +705,9 @@ section {
 }
 
 
-/* ÁREA VISÍVEL */
+/* ================
+    ÁREA VISÍVEL
+===================*/
 
 .cargo-carousel-viewport {
     width: 100%;
@@ -706,7 +718,9 @@ section {
 }
 
 
-/* TRACK */
+/* ===============
+    TRACK
+=================*/
 
 .cargo-carousel-track {
     display: flex;
@@ -777,7 +791,7 @@ section {
 
 
 /* =========================
-   CONTEÚDO
+   CONTEÚDO DO CARD DE CARGAS
 ========================= */
 
 .cargo-card-content {
@@ -876,7 +890,7 @@ section {
 
 
 /* =========================
-   INDICADORES
+   INDICADORES DOTS
 ========================= */
 
 .cargo-carousel-dots {
@@ -1017,161 +1031,6 @@ section {
     flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-
-    .construction-actions {
-        flex-direction: column;
-    }
-
-    .construction-actions .btn {
-        width: 100%;
-    }
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 992px) {
-
-    .cargo-card {
-        flex: 0 0 calc((100% - 25px) / 2);
-    }
-
-    .cargo-carousel-prev {
-        left: -15px;
-    }
-
-    .cargo-carousel-next {
-        right: -15px;
-    }
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 992px) {
-
-    .hero-content,
-    .service-areas-content {
-        grid-template-columns: 1fr;
-    }
-
-    .advantages-grid,
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .header-actions a,
-    .nav-list {
-        font-size: .8rem;
-    }
-
-    .cubage-form {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    section {
-        padding: 30px 0;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .hero-content {
-        min-height: 100%;
-    }
-
-    .contact-grid,
-    .cubage-form {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-card {
-        width: 90vw;
-    }
-
-    .advantages-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .advantage-card {
-        padding: 10px;
-        font-size: .8rem;
-    }
-
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-buttons .btn {
-        width: 60%;
-    }
-}
-
-/* =========================
-   MOBILE CARGO-CAROUSEL
-========================= */
-
-@media (max-width: 768px) {
-
-    .cargo-card {
-        flex: 0 0 100%;
-    }
-
-    .cargo-carousel-button {
-        width: 42px;
-        height: 42px;
-
-        font-size: 1.1rem;
-    }
-
-    .cargo-carousel-prev {
-        left: 5px;
-    }
-
-    .cargo-carousel-next {
-        right: 5px;
-    }
-
-    .cargo-carousel-viewport {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .cargo-carousel-cta {
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-    .cargo-card-image {
-        height: 240px;
-    }
-}
-
-
 /* =========================
    LOCAÇÃO DE MESAS E CADEIRAS
 ========================= */
@@ -1289,52 +1148,278 @@ section {
     margin-top: 10px;
 }
 
+/* ========================================
+   PÁGINA SOBRE NÓS
+======================================== */
 
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 992px) {
-
-    .rental-content {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .rental-image {
-        max-width: 700px;
-
-        margin: 0 auto;
-    }
-
-    .rental-text {
-        text-align: center;
-    }
-
-    .rental-features li {
-        justify-content: center;
-    }
+.about-page {
+    padding: 50px 0;
+    background: #ffffff;
+    min-height: 100vh;
 }
 
-@media (max-width: 768px) {
+.about-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 70px;
+    align-items: center;
+}
 
-    .rental-section {
-        padding: 70px 0;
-    }
+.about-text {
+    max-width: 720px;
+}
 
-    .rental-image {
-        display: none;
-        border-radius: 16px;
-    }
+.about-text h1 {
+    color: #0f172a;
 
-    .rental-text h2 {
-        margin-bottom: 15px;
-    }
+    font-size: clamp(2.2rem, 4vw, 3rem);
 
-    .rental-features {
-        margin: 25px 0;
-    }
+    line-height: 1.2;
+
+    margin: 5px 0 25px;
+}
+
+.about-text p {
+    color: #64748b;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.about-text strong {
+    color: #334155;
+    font-weight: 700;
+}
+
+.about-actions {
+    margin-top: 30px;
+}
+
+
+/* ========================================
+   NÚMEROS / DESTAQUES
+======================================== */
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.about-highlight {
+    padding: 28px 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-highlight:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.about-highlight strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 2.3rem;
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+}
+
+.about-highlight span {
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+}
+
+.privacy-page {
+    padding: 50px 0;
+}
+
+
+/* ========================================
+   MISSÃO
+======================================== */
+
+.mission-section {
+    padding: 50px 0;
+
+    background: #f8fafc;
+
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.mission-content {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+.mission-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.mission-header h2 {
+    color: #0f172a;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.2;
+
+    margin: 5px 0 0;
+}
+
+
+.mission-main {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.mission-main h3 {
+    color: #2563eb;
+
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.mission-main p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #64748b;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   DIFERENCIAL
+======================================== */
+
+.mission-differential {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.mission-icon {
+    flex-shrink: 0;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+}
+
+.mission-icon img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+.mission-text h3 {
+    color: #0f172a;
+
+    font-size: 1.3rem;
+
+    margin: 0 0 8px;
+}
+
+.mission-text p {
+    color: #64748b;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   CTA FINAL
+======================================== */
+
+.about-cta {
+    padding: 50px 0;
+
+    background: #ffffff;
+}
+
+.about-cta-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.about-cta-content h2 {
+    color: #0f172a;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.2;
+
+    margin: 5px 0 15px;
+}
+
+.about-cta-content p {
+    color: #64748b;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
 }
 
 /* =========================
@@ -1419,4 +1504,235 @@ section {
     display: flex;
 
     justify-content: center;
+}
+
+/* =========================
+   RESPONSIVO TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero-content,
+    .service-areas-content {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid,
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-actions a,
+    .nav-list {
+        font-size: .8rem;
+    }
+
+    .cubage-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .rental-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .rental-image {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .rental-text {
+        text-align: center;
+    }
+
+    .rental-features li {
+        justify-content: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-text {
+        max-width: 800px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(3, 1fr);
+
+        max-width: 800px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .cargo-card {
+        flex: 0 0 calc((100% - 25px) / 2);
+    }
+
+    .cargo-carousel-prev {
+        left: -15px;
+    }
+
+    .cargo-carousel-next {
+        right: -15px;
+    }
+
+}
+
+/* ====================
+    RESPONSIVO MOBILE
+=====================*/
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 30px 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content {
+        min-height: 100%;
+    }
+
+    .contact-grid,
+    .cubage-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        width: 90vw;
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .advantage-card {
+        padding: 10px;
+        font-size: .8rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons .btn {
+        width: 60%;
+    }
+
+
+    .construction-actions {
+        flex-direction: column;
+    }
+
+    .construction-actions .btn {
+        width: 100%;
+    }
+
+    .cargo-card {
+        flex: 0 0 100%;
+    }
+
+    .cargo-carousel-button {
+        width: 42px;
+        height: 42px;
+
+        font-size: 1.1rem;
+    }
+
+    .cargo-carousel-prev {
+        left: 5px;
+    }
+
+    .cargo-carousel-next {
+        right: 5px;
+    }
+
+    .cargo-carousel-viewport {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cargo-carousel-cta {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .cargo-card-image {
+        height: 240px;
+    }
+
+    .about-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-text p {
+        font-size: 0.98rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-header {
+        margin-bottom: 35px;
+    }
+
+    .mission-main {
+        margin-bottom: 35px;
+    }
+
+    .mission-differential {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px;
+    }
+
+    .rental-section {
+        padding: 70px 0;
+    }
+
+    .rental-image {
+        display: none;
+        border-radius: 16px;
+    }
+
+    .rental-text h2 {
+        margin-bottom: 15px;
+    }
+
+    .rental-features {
+        margin: 25px 0;
+    }
+
 }
