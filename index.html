@@ -96,8 +96,8 @@
         ]
     }
     </script>
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="image" href="assets/images/hero/hero-1.webp" fetchpriority="high">
+    <link rel="stylesheet" href="css/style.css?v=20261102">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18405161587"></script>
@@ -144,13 +144,17 @@
         <!--IMAGEM DO HERO BANNER (OCUPANDO TODA A TELA ALÉM DO CONTAINER)-->
         <div class="hero-image">
 
-            <img src="assets/images/hero/hero-1.webp" alt="Transporte e logística" class="hero-slide-image active">
+            <img src="assets/images/hero/hero-1.webp" alt="Transporte e logística" class="hero-slide-image active"
+                fetchpriority="high" decoding="async">
 
-            <img src="assets/images/hero/hero-2.webp" alt="Transporte rodoviário" class="hero-slide-image">
+            <img src="assets/images/hero/hero-2.webp" alt="Transporte rodoviário" class="hero-slide-image"
+                fetchpriority="low" decoding="async">
 
-            <img src="assets/images/hero/hero-3.webp" alt="Serviços de frete" class="hero-slide-image">
+            <img src="assets/images/hero/hero-3.webp" alt="Serviços de frete" class="hero-slide-image"
+                fetchpriority="low" decoding="async">
 
-            <img src="assets/images/hero/hero-4.webp" alt="Serviços de frete" class="hero-slide-image">
+            <img src="assets/images/hero/hero-4.webp" alt="Serviços de frete" class="hero-slide-image"
+                fetchpriority="low" decoding="async">
 
         </div>
 
@@ -162,16 +166,17 @@
                 <img src="assets/images/logo/Logo_Cometa.png" alt="Logo da Empresa" class="hero-logo">
 
                 <h1 class="hero-title">
-                    Frete e mudança no Rio e Baixada Fluminense
+                    Frete e mudança no <span class="hero-highlight">Rio e Baixada Fluminense</span>
                 </h1>
-                <h2>Orçamento em 1 minuto pelo WhatsApp</h2>
 
-                <p class="hero-description">
-                    Mudança residencial e comercial
-                    <br>Carreto e frete pequeno
-                    <br>Reboque de motos
-                    <br>Aluguel de mesas e cadeiras
-                </p>
+                <h2>Orçamento rápido pelo WhatsApp</h2>
+
+                <ul class="hero-description hero-list">
+                    <li>Mudança residencial e comercial</li>
+                    <li>Carreto e frete pequeno</li>
+                    <li>Reboque de motos</li>
+                    <li>Aluguel de mesas e cadeiras</li>
+                </ul>
 
                 <div class="hero-buttons">
 
@@ -199,22 +204,42 @@
             <div class="trust-grid">
 
                 <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3.5 11.2 12 4l8.5 7.2" />
+                        <path d="M5.5 10v9.5h13V10" />
+                        <path d="M10 19.5v-5h4v5" />
+                    </svg>
                     <strong>+200</strong>
                     <span>Famílias atendidas</span>
                 </div>
 
                 <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M2.5 6h11v9.5h-11z" />
+                        <path d="M13.5 9.5h4.2l2.8 3v3h-7" />
+                        <circle cx="7" cy="17.5" r="1.8" />
+                        <circle cx="17" cy="17.5" r="1.8" />
+                    </svg>
                     <strong>+270</strong>
                     <span>Fretes realizados</span>
                 </div>
 
                 <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
+                        <path d="M3.5 10h17" />
+                        <path d="M8 3v4" />
+                        <path d="M16 3v4" />
+                        <path d="m9.5 15 2 2 3.5-3.8" />
+                    </svg>
                     <strong>18</strong>
                     <span>Meses de experiência</span>
                 </div>
 
             </div>
-
         </div>
 
     </section>
@@ -232,25 +257,51 @@
             <div class="advantages-grid">
 
                 <div class="advantage-card">
-                    <div class="advantage-icon">📦</div>
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3 4.5 6v5.5c0 4.4 3.1 8 7.5 9.5 4.4-1.5 7.5-5.1 7.5-9.5V6L12 3Z" />
+                            <path d="m8.8 12 2.4 2.4 4.2-4.6" />
+                        </svg>
+                    </div>
                     <h3>Transporte Seguro</h3>
                     <p>Proteção e cuidado com sua carga.</p>
                 </div>
 
                 <div class="advantage-card">
-                    <div class="advantage-icon">⏱</div>
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3.2 2" />
+                        </svg>
+                    </div>
                     <h3>Entregas Pontuais</h3>
                     <p>Cumprimento rigoroso dos prazos.</p>
                 </div>
 
                 <div class="advantage-card">
-                    <div class="advantage-icon">📍</div>
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" />
+                            <circle cx="12" cy="10" r="2.4" />
+                        </svg>
+                    </div>
                     <h3>Rastreamento</h3>
                     <p>Acompanhe sua carga em tempo real.</p>
                 </div>
 
                 <div class="advantage-card">
-                    <div class="advantage-icon">🤝</div>
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="9" cy="8.5" r="3.2" />
+                            <path d="M3.5 19.5c0-3.2 2.5-5.5 5.5-5.5s5.5 2.3 5.5 5.5" />
+                            <path d="M15.5 5.6a3.2 3.2 0 0 1 0 5.8" />
+                            <path d="M17.2 14.4c2.2.6 3.8 2.5 3.8 5.1" />
+                        </svg>
+                    </div>
                     <h3>Atendimento Personalizado</h3>
                     <p>Soluções sob medida para cada cliente.</p>
                 </div>
@@ -906,9 +957,9 @@
         </div>
 
     </footer>
-    <script src="js/main.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/cargo-carousel.js"></script>
+    <script src="js/main.js?v=20261102"></script>
+    <script src="js/carousel.js?v=20261102"></script>
+    <script src="js/cargo-carousel.js?v=20261102"></script>
     <!--BARRA FIXA NO CELULAR-->
     <div class="mobile-bar">
         <a href="#contato" class="btn btn-primary btn-cta">Pedir orçamento</a>

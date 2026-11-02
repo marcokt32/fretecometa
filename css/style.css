@@ -2455,3 +2455,319 @@ h3 {
         padding: 72px 0;
     }
 }
+
+/* =========================
+   TRAÇO DOS TÍTULOS: ESQUERDA + ANIMAÇÃO
+========================= */
+
+.section-header h2,
+.service-areas-info h2 {
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2::after,
+.service-areas-info h2::after {
+    margin: 14px 0 0;
+}
+
+/* Estado inicial: traço recolhido. A classe é colocada pelo JavaScript. */
+.line-reveal::after {
+    transform: scaleX(0);
+    transform-origin: left center;
+
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.line-reveal.is-visible::after {
+    transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .line-reveal::after {
+        transform: scaleX(1);
+        transition: none;
+    }
+}
+
+/* =========================
+   MENU DE ÁREAS: SETA
+========================= */
+
+.dropdown summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown summary::after {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 8px;
+    height: 8px;
+
+    margin-left: 12px;
+
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+
+    transform: rotate(45deg);
+
+    transition: transform 0.3s ease;
+}
+
+.dropdown[open] summary::after {
+    transform: rotate(-135deg);
+}
+
+.dropdown.is-closing summary::after {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   DESIGN: CARDS DE CONTATO
+========================= */
+
+.contact-grid {
+    gap: 16px;
+}
+
+.contact-grid>a {
+    display: block;
+}
+
+.contact-card {
+    height: 100%;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    text-align: left;
+}
+
+.contact-avatar {
+    flex-shrink: 0;
+
+    width: 44px;
+    height: 44px;
+}
+
+.contact-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.contact-card h3 {
+    color: var(--dark);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Setinha indicando que o card é clicável */
+.contact-card::after {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 7px;
+    height: 7px;
+
+    margin-left: auto;
+
+    border-right: 2px solid #cbd5e1;
+    border-bottom: 2px solid #cbd5e1;
+
+    transform: rotate(-45deg);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-card:hover::after {
+    border-color: var(--primary);
+
+    transform: translateX(3px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+
+    .contact-card {
+        width: 100%;
+    }
+}
+
+/* =========================
+   DESIGN: ÍCONES DOS DIFERENCIAIS
+========================= */
+
+.advantage-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 6px;
+
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+
+    color: var(--primary);
+
+    font-size: 1.6rem;
+    line-height: 1;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 0 14px rgba(255, 165, 0, 0.18),
+        0 4px 10px rgba(15, 23, 42, 0.20);
+
+    transition: box-shadow 0.3s ease;
+}
+
+.advantage-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.advantage-card:hover .advantage-icon {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 0 18px rgba(255, 165, 0, 0.35),
+        0 6px 14px rgba(15, 23, 42, 0.25);
+}
+
+/* =========================
+   DESIGN: ÍCONES DA FAIXA DE CONFIANÇA
+========================= */
+
+.trust-item:has(svg) {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 14px;
+
+    text-align: left;
+}
+
+.trust-item svg {
+    grid-row: 1 / span 2;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 10px;
+
+    color: var(--primary-dark);
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        inset 0 0 14px rgba(30, 58, 138, 0.10);
+}
+
+.trust-item:has(svg) strong {
+    margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+
+    .trust-item:has(svg) {
+        grid-template-columns: 1fr;
+
+        align-content: start;
+        justify-items: center;
+
+        text-align: center;
+    }
+
+    .trust-item svg {
+        grid-row: auto;
+
+        width: 40px;
+        height: 40px;
+
+        padding: 9px;
+
+        margin-bottom: 8px;
+    }
+}
+
+/* =========================
+   DESIGN: HIERARQUIA DE CORES DO BANNER
+========================= */
+
+.hero-title {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero-highlight {
+    color: var(--primary);
+}
+
+.hero-text h2 {
+    margin-bottom: 18px;
+
+    padding-left: 14px;
+
+    border-left: 3px solid var(--primary);
+
+    color: #bfdbfe;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.hero-list {
+    display: grid;
+    gap: 10px;
+}
+
+.hero-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #e2e8f0;
+
+    font-size: 1.1rem;
+}
+
+.hero-list li::before {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFA500' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
