@@ -150,6 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         dots.forEach((dot, index) => {
 
+            dot.hidden = index > maxIndex;
+
             dot.classList.toggle(
                 "active",
                 index === currentIndex
