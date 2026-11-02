@@ -148,7 +148,7 @@ form.addEventListener("submit", (e) => {
 });
 
 /* Todos os botões de WhatsApp abrem o formulário */
-document.querySelectorAll(".whatsapp-link").forEach(link => {
+document.querySelectorAll(".whatsapp-link, a.btn[href$='#contato']").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
         openModal();

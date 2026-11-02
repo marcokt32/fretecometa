@@ -1780,7 +1780,7 @@ section {
     margin-bottom: 5px;
 }
 
-.lead-box > p {
+.lead-box>p {
     color: #64748b;
     margin-bottom: 20px;
 }
@@ -1893,7 +1893,7 @@ section {
     margin-bottom: 5px;
 }
 
-.lead-box > p {
+.lead-box>p {
     color: #64748b;
     margin-bottom: 20px;
 }
@@ -1962,4 +1962,167 @@ section {
 .lead-submit {
     height: 48px;
     margin-top: 5px;
+}
+
+/* =========================
+   BOTÃO DE AÇÃO (CTA)
+========================= */
+
+.btn-cta {
+    background: var(--primary);
+    color: var(--dark);
+    box-shadow: 0 6px 18px rgba(255, 165, 0, 0.35);
+}
+
+.btn-cta:hover {
+    background: #ffb733;
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   BARRA FIXA NO CELULAR
+========================= */
+
+.mobile-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 900;
+
+        display: flex;
+        gap: 10px;
+
+        padding: 10px 12px;
+
+        background: rgba(15, 23, 42, 0.97);
+        box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .mobile-bar .btn {
+        flex: 1;
+        padding: 12px 10px;
+        font-size: 0.95rem;
+    }
+
+    .mobile-bar .btn-secondary:hover {
+        color: var(--dark);
+    }
+
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* =========================
+   FAIXA DE CONFIANÇA
+========================= */
+
+.trust-bar {
+    padding: 28px 0;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    text-align: center;
+}
+
+.trust-item strong {
+    display: block;
+
+    color: var(--primary-dark);
+
+    font-size: 2.2rem;
+    line-height: 1;
+
+    margin-bottom: 6px;
+}
+
+.trust-item span {
+    color: #64748b;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .trust-bar {
+        padding: 20px 0;
+    }
+
+    .trust-item strong {
+        font-size: 1.6rem;
+    }
+
+    .trust-item span {
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================
+   FAIXA DE CONFIANÇA
+========================= */
+
+.trust-bar {
+    padding: 28px 0;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    text-align: center;
+}
+
+.trust-item strong {
+    display: block;
+
+    color: var(--primary-dark);
+
+    font-size: 2.2rem;
+    line-height: 1;
+
+    margin-bottom: 6px;
+}
+
+.trust-item span {
+    color: #64748b;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .trust-bar {
+        padding: 20px 0;
+    }
+
+    .trust-item strong {
+        font-size: 1.6rem;
+    }
+
+    .trust-item span {
+        font-size: 0.8rem;
+    }
 }
