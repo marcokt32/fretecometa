@@ -2126,3 +2126,11 @@ section {
         font-size: 0.8rem;
     }
 }
+
+/* Esconde os botões do hero no celular (a barra fixa já cumpre esse papel) */
+@media (max-width: 768px) {
+
+    .hero-buttons {
+        display: none;
+    }
+}
